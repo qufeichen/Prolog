@@ -9,12 +9,14 @@ element(nitrogen,'N').
 element(oxygen,'O').
 
 % lookup
-lookup:- repeat,
+lookup:-
+	repeat,
 	write('Symbol to look-up: '),
 	read(X),
 	eval(Y,X).
 
-eval(Y,X):- element(Y,X),
+eval(Y,X):-
+	element(Y,X),
 	write(X),
 	write(' is the symbol for: '),
 	writeln(Y),
